@@ -1,38 +1,19 @@
-window.onload = function(){
+var getCurrentTime = function(){
+    var currentTime = new Date();
 
-    var clockContainer = document.getElementById('clock');
-    console.log(clockContainer);
+    var hours = currentTime.getHours();
+    var minutes = currentTime.getMinutes();
+    var seconds = currentTime.getSeconds();
 
-    window.setInterval(function(){
-        clockContainer.innerHTML = getCurrentDateTime();
-    }, 1000);
+    var timeString = addZeroBefore(hours)+ ':' +addZeroBefore(minutes)+ ':' +addZeroBefore(seconds);
 
-var getCurrentDateTime = function(){
-    var currentDate = new Date();
-
-    var hours = currentDate.getHours();
-    var minutes = currentDate.getMinutes();
-    var seconds = currentDate.getSeconds();
-	var date = currentDate.getDate();
-	var month = currentDate.getMonth();
-	var year = currentDate.getFullYear();
-	var day = currentDate.getDay()
-
-	var days = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-	var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-    var dateString = addZeroBefore(hours)+ ':' +addZeroBefore(minutes)+ ':' +addZeroBefore(seconds)+ '<br>' +date+'. '+months[month]+'  '+year+ ' ' +days[day] ;
-
-    return dateString;
+    return timeString;
 };
 
-function addZeroBefore(dateNumber) {
-    if (dateNumber < 10) {
-        dateNumber = '0' + dateNumber;
+function addZeroBefore(timeNumber) {
+    if (timeNumber < 10) {
+        timeNumber = '0' + timeNumber;
     }
 	
-var getCurrentDateTime
-
-    return dateNumber;
-}
+    return timeNumber;
 }
