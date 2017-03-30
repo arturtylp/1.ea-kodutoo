@@ -17,3 +17,11 @@ window.onload = function(){
         dateContainer.innerHTML = getCurrentDate();
     }, 10000);
 };	
+
+function addZeroBefore(timeNumber) {
+    if (timeNumber < 10) {
+        timeNumber = '0' + timeNumber;
+    }
+	
+    return timeNumber;
+}

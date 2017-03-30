@@ -1,18 +1,22 @@
-#clock {
+#clock, #date, #author {
 	font-family: 'Space Mono';
 	color: #00ffe5;
 	position: relative;
 	text-align: center;
+}
+
+#clock{
 	font-size: 700%;
 	margin-top: 15%;
 }
 
 #date {
-	font-family: 'Space Mono';
-	color: #00ffe5;
-	text-align: center;
-	position: relative;
 	font-size: 200%;
+}
+
+#author {
+	font-size: 100%;
+	margin-top: 10%;
 }
 
 body {

@@ -9,11 +9,3 @@ var getCurrentTime = function(){
 
     return timeString;
 };
-
-function addZeroBefore(timeNumber) {
-    if (timeNumber < 10) {
-        timeNumber = '0' + timeNumber;
-    }
-	
-    return timeNumber;
-}
