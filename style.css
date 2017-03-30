@@ -1,9 +1,10 @@
 #clock {
 	font-family: 'Space Mono';
 	color: #00ffe5;
-	position: static;
+	position: relative;
 	text-align: center;
 	font-size: 700%;
+	margin-top: 15%;
 }
 
 #date {
